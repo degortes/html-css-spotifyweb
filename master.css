@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    padding-left: 15px;
+}
+main {
+    display: flex;
+    /* flex-grow: ; */
+}
+
+nav {
+    padding: 10px;
+    flex-shrink: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    flex-grow: 1;
+}
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 8px;
+}
+
+header ul {
+     display: none;
+ }
+
+.recents h3,
+.recents p,
+.recents h4 {
+    padding-bottom: 10px;
+}
+
+.fas,.fab, .far {
+    padding: 10px;
+}
+
+nav .fab {
+    font-size: 36px;
+}
+
+nav .fas, .hamburger i {
+    font-size: 20px;
+}
+
+.container  {
+    flex-grow: 3;
+    background-color: blue;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.search, .logo,
+.home-s, .library {
+    padding: 5px;
+
+
+}
+section {
+    height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+footer {
+    height: 75px;
+    background-color: yellow;
+}
+
+
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music-card, .recents {
+    padding: 15px;
+
+}
+
+.xl-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+    color: white;
+}
+
+.download {
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
+.user {
+    padding: 5px;
+}
+@media screen and (min-width: 768px) {
+
+    .hide {
+        display: inline;
+    }
+
+    header ul {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+}
