@@ -34,6 +34,12 @@ nav {
     background-color: black;
 }
 
+.recents h4:hover,
+.recents p:hover {
+    color: white;
+
+}
+
 .recents h3,
 .recents p,
 .recents h4 {
@@ -43,7 +49,7 @@ nav {
 .recents h3,
 .recents h4 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 25px;
 }
 .fas,.fab, .far {
@@ -124,6 +130,9 @@ header {
     align-items: center;
 }
 
+header ul li:hover {
+    color: white;
+}
 header ul li {
     text-transform: uppercase;
     display: inline-block;
@@ -159,7 +168,8 @@ section {
 }
 
 .music-card, .recents {
-    padding: 30px 15px;;
+    padding: 30px 15px;
+    font-size: 14px;
 
 }
 
@@ -168,15 +178,36 @@ section {
     padding-top: 10px;
 }
 
+.music-card:hover p {
+    color: white;
+}
 .music-card img {
     border-radius: 50%;
     height: 160px;
+    transition: all 0.3s;
+}
+
+.square img {
+    border-radius: 0;
+}
+
+.music-card img:hover {
+    transform: scale(1.1);
+    border-radius: 0;
 }
 .xl-container {
     max-width: 1170px;
     margin: 0 auto;
 }
 
+.upper div div:hover a,
+.upper div div:hover i {
+    color: white;
+}
+.down-n div div:hover a,
+.down-n div div:hover i {
+    color: white;
+}
 
 /* footer */
 footer {
