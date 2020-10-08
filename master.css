@@ -162,14 +162,15 @@ section {
 
 .music-card p {
     text-align: center;
+    padding-top: 10px;
 }
 
 .music-card img {
     border-radius: 50%;
-    height: 170px;
+    height: 160px;
 }
 .xl-container {
-    max-width: 1200px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -178,7 +179,7 @@ section {
 footer {
     padding: 10px;
     height: 75px;
-    background-color: #172f4f;
+    background-color: #363637;
     display: flex;
     justify-content: space-between;
     align-items: center;
