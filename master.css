@@ -1,4 +1,6 @@
+
 * {
+    color: #b3b3b3;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,90 +13,142 @@ a {
 
 h2 {
     padding-left: 15px;
+    font-size: 45px;
+    color: white;
 }
 main {
     display: flex;
-    /* flex-grow: ; */
 }
+
+/* nav */
+
 
 nav {
-    padding: 10px;
+    display: flex;
     flex-shrink: 0;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
     flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
 }
-
-header {
-    height: 75px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-header ul li {
-    display: inline-block;
-    padding: 5px;
-    font-size: 15px;
-}
-
-header ul {
-     display: none;
- }
-
 .recents h3,
 .recents p,
 .recents h4 {
     padding-bottom: 10px;
 }
 
+.recents h3,
+.recents h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 25px;
+}
 .fas,.fab, .far {
-    padding: 10px;
+    padding: 5px 10px;
 }
 
-nav .fab {
+nav .fab,
+.fa-pause-circle {
     font-size: 36px;
 }
 
 nav .fas, .hamburger i,
- .fa-user  {
+.fa-user  {
     font-size: 20px;
 }
-
-.container  {
-    flex-grow: 3;
-        background-image: linear-gradient(135deg,#a28e27,black);
-}
-
 
 .logo {
     display: flex;
     align-items: center;
 }
 
-.search, .logo,
-.home-s, .library {
-    padding: 5px;
-
+.logo i, .logo h1,
+.home-s i, .home-s a,
+.user i+a  {
+    color: white;
 
 }
+
+.account,.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search, .logo,
+.home-s, .library, .user {
+    padding: 5px;
+}
+
+
+.download {
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
+
+
+.container  {
+    flex-grow: 3;
+    background-image: linear-gradient(135deg,#a28e27,black);
+}
+
+/* scrollbar hack */
+
+.container ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.container ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.container ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(135deg,#a28e27,black);
+  border-radius: 10px;
+}
+
+.container ::-webkit-scrollbar-thumb:hover {
+  background: #a28e27;
+}
+
+/*********************** header */
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 11px;
+}
+
+header ul {
+     display: none;
+ }
+.markup {
+    position: relative;
+    color: white;
+}
+.markup::after {
+    content: "";
+    background-color: lightgreen;
+    height: 1px;
+    width: 50px;
+    position: absolute;
+    bottom: -1px;
+    left: calc(50% - 25px);
+}
+
 section {
     height: calc(100vh - 150px);
     overflow: auto;
 }
-
-footer {
-    color: white;
-    height: 75px;
-    background-color: #172f4f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 .music-container {
     display: flex;
@@ -102,37 +156,50 @@ footer {
 }
 
 .music-card, .recents {
-    padding: 15px;
+    padding: 30px 15px;;
 
 }
 
+.music-card p {
+    text-align: center;
+}
+
+.music-card img {
+    border-radius: 50%;
+    height: 170px;
+}
 .xl-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.download {
-    border-bottom: 1px solid white;
-    padding: 5px;
-}
 
-.user {
-    padding: 5px;
+/* footer */
+footer {
+    padding: 10px;
+    height: 75px;
+    background-color: #172f4f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
-
 
 .img-container img {
     height: 60px;
 }
 
+
 .on-air {
     display: flex;
 }
 
-
-.info-air, .hide {
+.info-air {
     display: none;
-    color: white;
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -148,22 +215,21 @@ footer {
 
 .play-hbar {
     position: relative;
-    width: 170px;
+    width: 40vw;
     height: 4px;
     background-color: grey;
 }
 
 .manage {
-    display: flex;
-    align-items: center;
-    padding: 10px;
+    display: none;
 }
 
 .play-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 20px;
+    align-items: center;
 }
-
 
 .play-bottom div {
     padding: 0 10px;
@@ -185,14 +251,21 @@ footer {
 }
 
 
+
 @media screen and (min-width: 768px) {
+
+    .account,.controls {
+        display: block;
+    }
 
     .hide {
         display: inline;
     }
 
     header ul {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hamburger {
@@ -201,6 +274,12 @@ footer {
 
     header {
         justify-content: center;
+    }
+
+    .manage {
+        display: flex;
+        align-items: center;
+        padding: 10px;
     }
 
 }
