@@ -190,8 +190,8 @@ section {
 .square img {
     border-radius: 0;
 }
-
-.music-card img:hover {
+.img-container:hover img,
+.music-card:hover img {
     transform: scale(1.1);
     border-radius: 0;
 }
@@ -280,8 +280,9 @@ footer {
   transition: opacity .2s;
 }
 
-.slider:hover {
-  opacity: 1;
+.slider:hover  {
+ background: white;
+ opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
@@ -302,6 +303,10 @@ footer {
   border-radius: 50%;
 }
 
+.info-air p:hover,
+footer i:hover {
+    color: white;
+}
 @media screen and (min-width: 768px) {
 
     .account,.controls {
