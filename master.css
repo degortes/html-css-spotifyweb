@@ -24,6 +24,7 @@ main {
 
 
 nav {
+    height: calc(100vh - 75px);
     display: flex;
     flex-shrink: 0;
     flex-grow: 1;
@@ -91,6 +92,7 @@ nav .fas, .hamburger i,
 
 
 .container  {
+    height: calc(100vh - 75px);
     flex-grow: 3;
     background-image: linear-gradient(135deg,#a28e27,black);
 }
@@ -178,6 +180,7 @@ section {
 
 /* footer */
 footer {
+    position: relative;
     height: 75px;
     background-color: #363637;
     display: flex;
@@ -214,7 +217,8 @@ footer {
 
 .play-hbar {
     width: 40vw;
-}
+    display: flex;
+    align-items: center;}
 
 .manage {
     display: none;
@@ -231,16 +235,16 @@ footer {
     padding: 0 10px;
 }
 .play-hbar.volume {
+    display: flex;
     width: 100px;
 }
 
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 6px;
-  background: #d3d3d3;
+  height: 3px;
+  background: #b3b3b3;
   outline: none;
-  opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -251,10 +255,10 @@ footer {
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border-radius: 40%;
   appearance: none;
+  border-radius: 50%;
   width: 12px;
-  height:12px;
+  height: 12px;
   background: white;
   cursor: pointer;
 }
@@ -264,7 +268,7 @@ footer {
   height: 12px;
   background: white;
   cursor: pointer;
-  border-radius: 40%;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -291,16 +295,20 @@ footer {
         justify-content: center;
     }
 
+
     .manage {
         display: flex;
         align-items: center;
         padding: 10px;
     }
 
+
+
+
+
 }
 
 @media screen and (min-width: 992px) {
-
     .info-air {
         display: flex;
         flex-direction: column;
