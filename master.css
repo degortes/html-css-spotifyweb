@@ -107,7 +107,7 @@ nav .fas, .hamburger i,
     width: 4px;
     height: 30px;
     background-color: lightgreen;
-    left: -10px;
+    left: -16px;
 }
 
 
@@ -358,6 +358,11 @@ footer i:hover {
         align-items: center;
         padding: 10px;
     }
+
+    .home-s::before {
+        left: -10px;
+    }
+
 
 
 
