@@ -20,6 +20,14 @@ main {
     display: flex;
 }
 
+h1::after {
+    content: "\00AE";
+    font-size: 8px;
+    margin-top: 8px;
+    vertical-align: top;
+    display: inline-block;
+}
+
 /* nav */
 
 
@@ -87,6 +95,19 @@ nav .fas, .hamburger i,
 .search, .logo,
 .home-s, .library, .user {
     padding: 5px;
+}
+.home-s {
+    position: relative;
+}
+
+.home-s::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background-color: lightgreen;
+    left: -10px;
 }
 
 
